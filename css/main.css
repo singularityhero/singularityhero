@@ -1163,6 +1163,7 @@ select{
   margin-bottom:20.5rem; }
 
 .timer-wrap span{
+    margin-top:130px;
     background-color:#C0004B;
     min-width:25rem;
     padding:1rem;
