@@ -17,22 +17,18 @@ $(document).ready(function () {
       $this.next().slideToggle();
     });
   });
-  $(document).on('click', '.scroll-link', function (e) {
-    var id = $(this).attr('href');
-    var $id = $(id);
-
-    if ($id.length === 0) {
-      return;
-    }
-
-    e.preventDefault();
-    var pos = $id.offset().top;
-    $('body, html').animate({
-      scrollTop: pos
-    });
+  var $root = $('html, body');
+  $('a[href^="#"]').click(function () {
+    var href = $.attr(this, 'href');
     $('.js-burger').removeClass('active');
     $('.js-nav').removeClass('active');
     $('body').removeClass('overflow');
+    $('html, body').animate({
+      scrollTop: $(href).offset().top
+    }, 500, function () {
+      window.location.hash = href;
+    });
+    return false;
   });
 }); // timer
 // setInterval(function () {

@@ -1038,7 +1038,8 @@ select{
 
 .accordion__title-wrap.active .accordion__icon:after{
       -webkit-transform:translateX(-50%) rotate(90deg);
-      transform:translateX(-50%) rotate(90deg); }
+      transform:translateX(-50%) rotate(90deg);
+      background-color:#fff; }
 
 .accordion__icon{
     width:1.4rem;
@@ -1162,7 +1163,6 @@ select{
   margin-bottom:20.5rem; }
 
 .timer-wrap span{
-    margin-top:130px;
     background-color:#C0004B;
     min-width:25rem;
     padding:1rem;
@@ -1219,56 +1219,74 @@ select{
   display:-webkit-flex;
   display:flex; }
 
-.follow-link{
-  -webkit-transition:all 0.3s ease;
-  transition:all 0.3s ease;
-  position:relative;
-  width:13rem;
-  height:11rem;
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:flex;
-  -webkit-box-align:center;
-  -webkit-align-items:center;
-  align-items:center;
-  -webkit-box-pack:center;
-  -webkit-justify-content:center;
-  justify-content:center;
-  margin:0 2rem;
-  border:3px solid #FFFFFF;
-  -webkit-clip-path:polygon(0px 25px, 25px 0px, calc(100% - 0px) 0px, calc(100% - 0px) calc(100% - 25px), calc(100% - 25px) calc(100% - 0px), 0px calc(100% - 0px), 0px 25px);
-  clip-path:polygon(0px 25px, 25px 0px, calc(100% - 0px) 0px, calc(100% - 0px) calc(100% - 25px), calc(100% - 25px) calc(100% - 0px), 0px calc(100% - 0px), 0px 25px); }
-
-.follow-link img{
-    width:auto;
-    height:6rem; }
-
-.follow-link:before, .follow-link:after{
+.follow-links svg{
+    width:75px;
+    height:60px;
+    fill:#FFFFFF;
+    opacity:0.6;
     -webkit-transition:all 0.3s ease;
-    transition:all 0.3s ease;
-    position:absolute;
-    content:"";
-    width:0;
-    height:0;
-    border-top:4rem solid #FFFFFF;
-    border-right:4rem solid transparent; }
+    transition:all 0.3s ease; }
 
-.follow-link:before{
-    bottom:-0.85rem;
-    right:-0.85rem;
-    -webkit-transform:rotate(180deg);
-    transform:rotate(180deg); }
+.follow-links .discord:hover{
+    border-color:#5662f6;
+    background-color:#5662f6; }
 
-.follow-link:after{
-    top:-0.85rem;
-    left:-0.85rem; }
+.follow-links .discord:hover:before, .follow-links .discord:hover:after{
+      border-top:4rem solid #5662f6; }
 
-.follow-link:hover{
+.follow-links .twitter:hover{
     background-color:#1d9bf0;
     border-color:#1d9bf0; }
 
-.follow-link:hover:before, .follow-link:hover:after{
+.follow-links .twitter:hover:before, .follow-links .twitter:hover:after{
       border-top:4rem solid #1d9bf0; }
+
+.follow-links a{
+    -webkit-transition:all 0.3s ease;
+    transition:all 0.3s ease;
+    position:relative;
+    width:13rem;
+    height:11rem;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+    justify-content:center;
+    margin:0 2rem;
+    border:3px solid #FFFFFF;
+    -webkit-clip-path:polygon(0px 25px, 25px 0px, calc(100% - 0px) 0px, calc(100% - 0px) calc(100% - 25px), calc(100% - 25px) calc(100% - 0px), 0px calc(100% - 0px), 0px 25px);
+    clip-path:polygon(0px 25px, 25px 0px, calc(100% - 0px) 0px, calc(100% - 0px) calc(100% - 25px), calc(100% - 25px) calc(100% - 0px), 0px calc(100% - 0px), 0px 25px); }
+
+.follow-links a img{
+      width:auto;
+      height:6rem; }
+
+.follow-links a:before, .follow-links a:after{
+      -webkit-transition:all 0.3s ease;
+      transition:all 0.3s ease;
+      position:absolute;
+      content:"";
+      width:0;
+      height:0;
+      border-top:4rem solid #FFFFFF;
+      border-right:4rem solid transparent; }
+
+.follow-links a:before{
+      bottom:-0.85rem;
+      right:-0.85rem;
+      -webkit-transform:rotate(180deg);
+      transform:rotate(180deg); }
+
+.follow-links a:after{
+      top:-0.85rem;
+      left:-0.85rem; }
+
+.follow-links a:hover svg{
+      opacity:1; }
 
 .team-section{
   padding:4rem 0;
@@ -1437,15 +1455,37 @@ select{
     flex-direction:column;
     -webkit-box-align:center;
     -webkit-align-items:center;
-    align-items:center; }
+    align-items:center;
+    position:relative; }
+
+.road__wrap_decor-left:after{
+      content:'';
+      position:absolute;
+      width:2px;
+      height:104.7%;
+      background-color:#ccc;
+      top:4.5rem;
+      left:-22.6rem; }
+
+.road__wrap_decor-right:after{
+      content:'';
+      position:absolute;
+      width:2px;
+      height:104.7%;
+      background-color:#ccc;
+      top:4.5rem;
+      right:-22.6rem; }
 
 .road__pers{
+    position:relative;
     font-style:italic;
     font-weight:800;
     font-size:36px;
     color:#FFFFFF;
     margin-bottom:2rem;
-    padding:5px 27px; }
+    padding:0.5rem 1.5rem;
+    min-width:15rem;
+    text-align:center; }
 
 .road__pers_red{
       background-color:#c0004b; }
@@ -1458,6 +1498,62 @@ select{
     font-size:16px;
     line-height:1.75;
     color:#141219; }
+
+.road__line{
+    position:absolute;
+    top:calc(50% - 1px);
+    width:39.8rem;
+    height:2px;
+    background-color:#ccc; }
+
+.road__line_first:before{
+      display:none; }
+
+.road__line_last:after{
+      display:none; }
+
+.road__line_left{
+      left:-3.3rem;
+      -webkit-transform:translateX(-100%);
+      transform:translateX(-100%); }
+
+.road__line_left:after{
+        left:-24px;
+        -webkit-transform:rotate(-45deg);
+        transform:rotate(-45deg); }
+
+.road__line_left:before{
+        left:-24px;
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg); }
+
+.road__line_right{
+      right:-3.3rem;
+      -webkit-transform:translateX(100%);
+      transform:translateX(100%); }
+
+.road__line_right:after{
+        right:-24px;
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg); }
+
+.road__line_right:before{
+        right:-24px;
+        -webkit-transform:rotate(-45deg);
+        transform:rotate(-45deg); }
+
+.road__line:after, .road__line:before{
+      content:'';
+      position:absolute;
+      width:3rem;
+      height:2px;
+      background-color:#ccc; }
+
+.road__line:after{
+      top:10px; }
+
+.road__line:before{
+      top:-10px; }
 
 .soc-wrap{
   background-color:#141219;
