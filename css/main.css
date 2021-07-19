@@ -1210,7 +1210,8 @@ select{
     .mobile-timer-wrap{
       display:-webkit-box;
       display:-webkit-flex;
-      display:flex; } }
+      display:flex;
+      margin:0; } }
 
 #timer{
   font-size:6rem;
@@ -1240,7 +1241,7 @@ select{
 
 @media (max-width: 768px){
     .follow-wrap{
-      margin-top:0; } }
+      margin-top:100px; } }
 
 .follow-title{
   font-weight:500;
@@ -1327,6 +1328,114 @@ select{
 
 .follow-links a:hover svg{
       opacity:1; }
+
+.input-container{
+  height:60px;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -webkit-flex-direction:column;
+  flex-direction:column;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+  justify-content:center;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  align-items:center; }
+
+@media (max-width: 768px){
+    .input-container{
+      margin-top:100px; } }
+
+.input-container .input-wrap{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+    justify-content:center;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+    align-items:center; }
+
+.input-container .input-wrap .input-wrap-left{
+      display:-webkit-box;
+      display:-webkit-flex;
+      display:flex;
+      -webkit-box-pack:center;
+      -webkit-justify-content:center;
+      justify-content:center;
+      -webkit-box-align:center;
+      -webkit-align-items:center;
+      align-items:center;
+      font-weight:500;
+      height:60px;
+      width:80px;
+      font-size:2rem;
+      text-align:center;
+      color:#FFFFFF;
+      background:#720733;
+      -webkit-transition:all 0.3s ease;
+      transition:all 0.3s ease;
+      -webkit-clip-path:polygon(2px 10px, 10px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 10px), calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 10px);
+      clip-path:polygon(2px 10px, 10px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 10px), calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 10px); }
+
+.input-container .input-wrap .input-wrap-left-icon,
+    .input-container .input-wrap .input-wrap-right-icon{
+      margin-top:3px;
+      width:18px;
+      height:2px; }
+
+.input-container .input-wrap .input-wrap-right-icon{
+      height:20px; }
+
+.input-container .input-wrap .input-wrap-right{
+      font-weight:500;
+      height:60px;
+      width:80px;
+      font-size:2rem;
+      text-align:center;
+      color:#FFFFFF;
+      background:#720733;
+      -webkit-transition:all 0.3s ease;
+      transition:all 0.3s ease;
+      -webkit-clip-path:polygon(2px 2px, 10px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 10px), calc(100% - 10px) calc(100% - 2px), 2px calc(100% - 2px), 2px 10px);
+      clip-path:polygon(2px 2px, 10px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 10px), calc(100% - 10px) calc(100% - 2px), 2px calc(100% - 2px), 2px 10px); }
+
+.input-container input{
+    width:200px;
+    padding:10px 15px;
+    background:#320d1f;
+    font-style:normal;
+    font-weight:600;
+    font-size:30px;
+    line-height:24px;
+    text-align:center;
+    letter-spacing:0.15em;
+    color:#ffffff; }
+
+.input-container .mint-button{
+    padding:16px;
+    width:360px;
+    text-transform:uppercase;
+    margin-top:30px;
+    font-style:normal;
+    font-weight:bold;
+    font-size:30px;
+    line-height:24px;
+    text-align:center;
+    letter-spacing:0.3em;
+    color:#ffffff; }
+
+.input-container .mint-description{
+    margin-top:15px;
+    font-weight:500;
+    font-size:16px;
+    line-height:24px;
+    text-align:center;
+    color:#9e9ea0; }
 
 .team-section{
   padding:4rem 0;
@@ -1658,6 +1767,9 @@ select{
   transition:all 0.3s ease;
   -webkit-clip-path:polygon(2px 10px, 10px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 10px), calc(100% - 10px) calc(100% - 2px), 2px calc(100% - 2px), 2px 10px);
   clip-path:polygon(2px 10px, 10px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 10px), calc(100% - 10px) calc(100% - 2px), 2px calc(100% - 2px), 2px 10px); }
+
+.btn:hover{
+    background:#29763f; }
 
 .section-title{
   font-weight:500;
