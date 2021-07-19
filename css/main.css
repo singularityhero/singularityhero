@@ -1126,6 +1126,14 @@ select{
       .accordion__content{
         padding-bottom:7rem; } }
 
+.total-minted{
+  margin-top:10px;
+  font-weight:700;
+  font-size:30px;
+  line-height:24px;
+  text-align:center;
+  color:white; }
+
 .main-section{
   padding:4rem 0 16.5rem;
   background-image:url("../images/main-bg.jpg");
