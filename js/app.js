@@ -372,10 +372,9 @@ var contractAddress = "0xa914ac9eda58c6ecd2e9c525555d49675da5d6a7";
 
 var getMinted = function getMinted() {
   var web3 = new Web3(new Web3.providers.HttpProvider( // "https://rinkeby.infura.io/v3/2d4f413e764740ef89d5596033efec3f"
-  "https://mainnet.infura.io/v3/f63b077506c14876b59282a00b9c2fed"));
+  "https://mainnet.infura.io/v3/2d4f413e764740ef89d5596033efec3f"));
   var contract = new web3.eth.Contract(abi, contractAddress);
   contract.methods.totalSupply().call().then(function (result) {
-    console.log(result);
     $('.total-minted').text("".concat(result, " / 10000"));
   });
   setInterval(function () {
@@ -383,7 +382,7 @@ var getMinted = function getMinted() {
       console.log(result);
       $('.total-minted').text("".concat(result, " / 10000"));
     });
-  }, 10000);
+  }, 300000);
 };
 
 function mint(_x6) {
@@ -407,7 +406,7 @@ function _mint() {
 
           case 2:
             web3 = new Web3(new Web3.providers.HttpProvider( // "https://rinkeby.infura.io/v3/2d4f413e764740ef89d5596033efec3f"
-            "https://mainnet.infura.io/v3/f63b077506c14876b59282a00b9c2fed")); // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            "https://mainnet.infura.io/v3/2d4f413e764740ef89d5596033efec3f")); // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
             contract = new web3.eth.Contract(abi, contractAddress);
             _context10.t0 = contractAddress;
