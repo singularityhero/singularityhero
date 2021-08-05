@@ -1277,7 +1277,7 @@ select{
 
 @media (min-width: 768px){
     .follow-title{
-      font-size:4.8rem; } }
+      font-size:4rem; } }
 
 .follow-links{
   display:-webkit-box;
@@ -1458,6 +1458,14 @@ select{
     font-weight:500;
     font-size:16px;
     line-height:24px;
+    text-align:center;
+    color:white; }
+
+.input-container .mint-notification{
+    margin-top:5px;
+    font-weight:500;
+    font-size:14px;
+    line-height:18px;
     text-align:center;
     color:white; }
 
