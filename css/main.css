@@ -1180,7 +1180,7 @@ select{
     background-color:#C0004B;
     min-width:25rem;
     padding:1rem 2rem;
-    font-size:4rem;
+    font-size:2rem;
     text-align:center;
     color:#FFFFFF;
     font-style:italic;
@@ -1189,7 +1189,7 @@ select{
 
 @media (min-width: 768px){
       .timer-wrap span{
-        font-size:6.5rem; } }
+        font-size:4rem; } }
 
 .mobile-timer-wrap{
   display:none;
@@ -1211,7 +1211,7 @@ select{
     background-color:#C0004B;
     min-width:25rem;
     padding:1rem 2rem;
-    font-size:4rem;
+    font-size:2rem;
     text-align:center;
     color:#FFFFFF;
     font-style:italic;
