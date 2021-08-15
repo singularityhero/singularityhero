@@ -372,7 +372,8 @@ var contractAddress = "0xa914ac9eda58c6ecd2e9c525555d49675da5d6a7";
 
 var getMinted = function getMinted() {
   var web3 = new Web3(new Web3.providers.HttpProvider( // "https://rinkeby.infura.io/v3/2d4f413e764740ef89d5596033efec3f"
-  "https://mainnet.infura.io/v3/243b28e194594030abe2ca0aa2a5633a"));
+  //"https://mainnet.infura.io/v3/243b28e194594030abe2ca0aa2a5633a"
+  "https://mainnet.infura.io/v3/608000e7b4924b7b84ca784267f02edf"));
   var contract = new web3.eth.Contract(abi, contractAddress);
   contract.methods.totalSupply().call().then(function (result) {
     $('.total-minted').text("".concat(result, " / 10000"));
@@ -406,14 +407,16 @@ function _mint() {
 
           case 2:
             web3 = new Web3(new Web3.providers.HttpProvider( // "https://rinkeby.infura.io/v3/2d4f413e764740ef89d5596033efec3f"
-            "https://mainnet.infura.io/v3/243b28e194594030abe2ca0aa2a5633a")); // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            //"https://mainnet.infura.io/v3/243b28e194594030abe2ca0aa2a5633a"
+            "https://mainnet.infura.io/v3/608000e7b4924b7b84ca784267f02edf"));
+            gi; // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
             contract = new web3.eth.Contract(abi, contractAddress);
             _context10.t0 = contractAddress;
-            _context10.next = 7;
+            _context10.next = 8;
             return getAccounts();
 
-          case 7:
+          case 8:
             _context10.t1 = _context10.sent[0];
             _context10.t2 = bigInt(cost).multiply(bigInt(totalToMint)).toString(16);
             _context10.t3 = contract.methods.mintHeroes(totalToMint).encodeABI();
@@ -423,28 +426,28 @@ function _mint() {
               value: _context10.t2,
               data: _context10.t3
             };
-            _context10.prev = 11;
-            _context10.next = 14;
+            _context10.prev = 12;
+            _context10.next = 15;
             return (_window2 = window) === null || _window2 === void 0 ? void 0 : (_window2$ethereum = _window2.ethereum) === null || _window2$ethereum === void 0 ? void 0 : _window2$ethereum.request({
               method: "eth_sendTransaction",
               params: [transactionParameters]
             });
 
-          case 14:
-            _context10.next = 19;
+          case 15:
+            _context10.next = 20;
             break;
 
-          case 16:
-            _context10.prev = 16;
-            _context10.t4 = _context10["catch"](11);
+          case 17:
+            _context10.prev = 17;
+            _context10.t4 = _context10["catch"](12);
             console.log(_context10.t4);
 
-          case 19:
+          case 20:
           case "end":
             return _context10.stop();
         }
       }
-    }, _callee10, null, [[11, 16]]);
+    }, _callee10, null, [[12, 17]]);
   }));
   return _mint.apply(this, arguments);
 }
