@@ -372,7 +372,7 @@ var contractAddress = "0xa914ac9eda58c6ecd2e9c525555d49675da5d6a7";
 
 var getMinted = function getMinted() {
   var web3 = new Web3(new Web3.providers.HttpProvider( // "https://rinkeby.infura.io/v3/2d4f413e764740ef89d5596033efec3f"
-  "https://mainnet.infura.io/v3/2d4f413e764740ef89d5596033efec3f"));
+  "https://mainnet.infura.io/v3/243b28e194594030abe2ca0aa2a5633a"));
   var contract = new web3.eth.Contract(abi, contractAddress);
   contract.methods.totalSupply().call().then(function (result) {
     $('.total-minted').text("".concat(result, " / 10000"));
@@ -406,7 +406,7 @@ function _mint() {
 
           case 2:
             web3 = new Web3(new Web3.providers.HttpProvider( // "https://rinkeby.infura.io/v3/2d4f413e764740ef89d5596033efec3f"
-            "https://mainnet.infura.io/v3/2d4f413e764740ef89d5596033efec3f")); // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            "https://mainnet.infura.io/v3/243b28e194594030abe2ca0aa2a5633a")); // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
             contract = new web3.eth.Contract(abi, contractAddress);
             _context10.t0 = contractAddress;
