@@ -36,16 +36,12 @@ $(document).ready(function () {
     return false;
   });
 }); // timer
-// setInterval(function () {
-//   var date = new Date()
-//   var format = [
-//     ('0' + date.getHours()).substr(-2),
-//     ('0' + date.getMinutes()).substr(-2),
-//     ('0' + date.getSeconds()).substr(-2),
-//   ].join(':')
-//   document.getElementById('timer').innerHTML = format
-// }, 500)
-// burger
+
+setInterval(function () {
+  var date = new Date();
+  var format = [('0' + date.getHours()).substr(-2), ('0' + date.getMinutes()).substr(-2), ('0' + date.getSeconds()).substr(-2)].join(':');
+  document.getElementById('timer').innerHTML = format;
+}, 500); // burger
 
 if (document.querySelector('.js-burger')) {
   var BURGER = document.querySelector('.js-burger');
